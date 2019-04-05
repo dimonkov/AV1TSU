@@ -46,9 +46,11 @@ namespace AV1TSUx0003
 
         private void Output_Click(object sender, EventArgs e)
         {
-            SaveFileDialog Output = new SaveFileDialog();
-            Output.Filter = "MKV|*.mkv|WEBM|*.webm";
-            Output.ShowDialog();
+			SaveFileDialog Output = new SaveFileDialog
+			{
+				Filter = "MKV|*.mkv|WEBM|*.webm"
+			};
+			Output.ShowDialog();
             ContainerIndex = Output.FilterIndex;
             OutputLocation.Text = Output.FileName;
         }
